@@ -1,4 +1,4 @@
-from database import Base, intpk
+from database import Base, intpk, str_50
 
 from sqlalchemy import String
 from sqlalchemy.orm import mapped_column, Mapped
@@ -12,9 +12,9 @@ class User(Base):
     __tablename__ = "users"
 
     id: Mapped[intpk]
-    first_name: Mapped[str] = mapped_column(String(50), nullable=False)
-    last_name: Mapped[str] = mapped_column(String(50), nullable=False)
-    middle_name: Mapped[str] = mapped_column(String(50), nullable=False)
+    first_name: Mapped[str_50]
+    last_name: Mapped[str_50]
+    middle_name: Mapped[str_50]
 
 
 metadata = User.metadata
