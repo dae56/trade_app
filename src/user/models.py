@@ -15,6 +15,7 @@ class User(Base):
     first_name: Mapped[str_50]
     last_name: Mapped[str_50]
     middle_name: Mapped[str_50]
+    created_at
 
 
 metadata = User.metadata
